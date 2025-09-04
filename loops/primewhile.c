@@ -24,12 +24,12 @@ int main()
 }
     if(isprime)
     {
-       // printf("this is a prie number");
-       printf("no a prime");
+       printf("this is a prime  number");
+      
     }
     else{
-          printf("this is a prie number");
-       // printf("no a prime");
+          //printf("this is a prie number");
+        printf("not a prime");
 
     }
     return 0;
