@@ -15,9 +15,6 @@ int binarysearch(int arr[5])
         else {
             end=mid-1;
         }
-       
-           
-        
     }
      return -1;
 }

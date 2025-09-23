@@ -1,14 +1,17 @@
 #include<stdio.h>
-void sum(int *a,int *b){
-           int temp=*a;
-           *a=*b;
-           *b=temp;
-            
+void swap(int *a,int *b){
+        //    int temp=*a;
+        //    *a=*b;
+        //    *b=temp;
+        *a=*a+*b;
+        *b=*a-*b;
+        *a=*a-*b;
 }
 int main(){
     int a=5,b=8;
-    sum(&a,&b);
-    printf("%d%d",a,b);
+     printf("%d\n%d\n",&a,&b);
+    swap(&a,&b);
+    printf("%d\n%d\n",a,b);
     return 0;
    
 }
