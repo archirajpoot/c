@@ -1,24 +1,39 @@
 #include<stdio.h>
 int main(){
-    int height[]={1,2,3,4,5,6,7};
-    int n=sizeof(height)/sizeof(height[0]);
-    int i=0;
-    int j=n-1;
-    int maxwater=0;
-    while(i<j){
-        int h;
-     if(height[i]<height[j]){
-        h=height[i];
-     }
-     int w=j-i;
-     int water=h*w;
-     if(water>maxwater)
-    {
-        maxwater==water;
+    int height[]={5,6,0,3,5,2};
+    int left[6];
+    int right[6];
+    left[0]=height[0];
+    int water=0;
+    for(int i=1;i<6;i++){
+        if(left[i-1]<height[i]){
+            left[i]=height[i];
+        }
+        else{
+            left[i]=left[i-1];
+        }
     }
-     if()
+    right[5]=height[5];
+   for(int i=4;i>=0;i--){
+    if(right[i+1]<height[i]){
+        right[i]=height[i];
+    }
+    else{
+        right[i]=right[i+1];
+    }
 }
-printf("%d",maxwater);
-
-
+    for(int i=0;i<6;i++){
+     int minheight;
+     if(left[i]<right[i]){
+        minheight=left[i];
+     }
+     else{
+        minheight=right[i];
+     }
+     water=water+(minheight-height[i]);
+    }
+ 
+   
+      printf("%d",water);
+      return 0;
 }
