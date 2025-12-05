@@ -14,10 +14,10 @@ int main()
         }
         for(int p=2;p<=i;p++)
         {
-            printf("%d",num++);
+            printf("%d ",num++);
         }
        
-       printf("\n");
+       printf(" \n");
     }
     return 0;
 }
